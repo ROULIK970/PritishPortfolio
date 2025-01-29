@@ -18,10 +18,13 @@ export const login = createAsyncThunk(
         return handleError("Email and password required!");
       }
      
-      const res = await axios.post("http://localhost:3000/auth/login", {
-        email,
-        password,
-      });
+      const res = await axios.post(
+        "https://pritishportfolio.onrender.com/auth/login",
+        {
+          email,
+          password,
+        }
+      );
       console.log(res.data)
 
       const {message,success,name, jwtToken} = res.data
@@ -53,11 +56,14 @@ export const signup = createAsyncThunk(
       if (!name || !email || !password) {
         return handleError("Name, email and password required!");
       }
-      const res = await axios.post("http://localhost:3000/auth/signup", {
-        name,
-        email,
-        password,
-      });
+      const res = await axios.post(
+        "https://pritishportfolio.onrender.com/auth/signup",
+        {
+          name,
+          email,
+          password,
+        }
+      );
       const { success, message } = res.data;
       if (success) {
         handleSuccess(message);
