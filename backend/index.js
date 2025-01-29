@@ -16,7 +16,7 @@ dotenv.config({ path: "./env" });
 const httpServer = createServer(app); // HTTP server for Socket.IO
 const io = new Server(httpServer, {
   cors: {
-    origin: "*", // Allow all origins for now
+    origin: "pritish-portfolio-fz59glooy-roulik970s-projects.vercel.app", // Allow all origins for now
     methods: ["GET", "POST"],
   },
 });
