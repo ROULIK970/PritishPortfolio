@@ -6,8 +6,7 @@ import connectDB from './db.js'
 import AuthRouter from './Routes/auth.router.js'
 import ChatRouter from "./Routes/chat.router.js";
 import ContactRouter from "./Routes/contact.router.js";
-import { createServer } from "http";
-import { Server } from "socket.io";
+
 
 dotenv.config({ path: "./env" });
 
@@ -22,7 +21,6 @@ app.use("/", ChatRouter);
 app.use('/auth', AuthRouter)
 app.use('/contact', ContactRouter)
 
-// Socket.IO Chat Logic to be added
 
 
 connectDB()
