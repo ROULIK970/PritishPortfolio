@@ -5,7 +5,7 @@ import { logout } from "../features/authSlice.js";
 import { useNavigate } from "react-router-dom";
 
 
-const socket = io("http://localhost:3000"); // Replace with your backend URL
+// const socket = io("http://localhost:3000"); // Replace with your backend URL
 
 const Chat = () => {
   const dispatch = useDispatch()
@@ -22,37 +22,37 @@ const Chat = () => {
   }
 
 
- useEffect(() => {
-   // Register the owner (you) when the component mounts
-   const loggedInUser = localStorage.getItem("loggedInUser");
-   if (loggedInUser === "owner") {
-     socket.emit("registerOwner");
-   }
+//  useEffect(() => {
+//    // Register the owner (you) when the component mounts
+//    const loggedInUser = localStorage.getItem("loggedInUser");
+//    if (loggedInUser === "owner") {
+//      socket.emit("registerOwner");
+//    }
 
-   socket.on("chatMessage", ({ senderId, message }) => {
-     setMessages((prevMessages) => [
-       ...prevMessages,
-       { sender: senderId === "owner" ? "You" : "Client", message },
-     ]);
-   });
+//    socket.on("chatMessage", ({ senderId, message }) => {
+//      setMessages((prevMessages) => [
+//        ...prevMessages,
+//        { sender: senderId === "owner" ? "You" : "Client", message },
+//      ]);
+//    });
 
-   return () => {
-     socket.off("chatMessage");
-   };
- }, []);
+//    return () => {
+//      socket.off("chatMessage");
+//    };
+//  }, []);
 
- const sendMessage = () => {
-   if (message.trim()) {
-     const senderId =
-       localStorage.getItem("loggedInUser") === "owner" ? "owner" : socket.id;
-     socket.emit("chatMessage", { message, senderId }); // Send message with senderId
-     setMessages((prevMessages) => [
-       ...prevMessages,
-       { sender: "You", message },
-     ]);
-     setMessage("");
-   }
- };
+//  const sendMessage = () => {
+//    if (message.trim()) {
+//      const senderId =
+//        localStorage.getItem("loggedInUser") === "owner" ? "owner" : socket.id;
+//      socket.emit("chatMessage", { message, senderId }); // Send message with senderId
+//      setMessages((prevMessages) => [
+//        ...prevMessages,
+//        { sender: "You", message },
+//      ]);
+//      setMessage("");
+//    }
+//  };
 
   return (
     <div style={{ padding: "20px" }}>
