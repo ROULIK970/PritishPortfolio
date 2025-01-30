@@ -45,7 +45,7 @@ function Home() {
               Chat With Me!
             </Link>
             <a
-              href={cloudinaryResumeUrl}
+              href={ResumeUrl}
               className="ml-4 px-6 py-3 bg-blue-600 rounded-lg hover:bg-blue-500"
             >
               Resume
