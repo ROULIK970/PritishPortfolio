@@ -7,8 +7,8 @@ function Home() {
   const ImageUrl =
     "https://res.cloudinary.com/dhw65qkcs/image/upload/v1709716235/Yelpcamp/ezmd8ggekv2ctdetdxf7.jpg";
 
-  const cloudinaryResumeUrl =
-    "https://view.officeapps.live.com/op/view.aspx?src=https%3A%2F%2Fraw.githubusercontent.com%2FROULIK970%2Fmy-portfolio%2Frefs%2Fheads%2Fmain%2Fsrc%2Fassets%2Fresume.docx&wdOrigin=BROWSELINK";
+  const ResumeUrl =
+    "https://1drv.ms/w/s!ArPJMb3SPFbvlArJRDJSHtZgEIXT?e=oOPjia";
 
 
   return (
