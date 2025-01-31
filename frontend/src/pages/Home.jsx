@@ -8,7 +8,7 @@ function Home() {
     "https://res.cloudinary.com/dhw65qkcs/image/upload/v1709716235/Yelpcamp/ezmd8ggekv2ctdetdxf7.jpg";
 
   const ResumeUrl =
-    "https://1drv.ms/w/s!ArPJMb3SPFbvlArJRDJSHtZgEIXT?e=oOPjia";
+    "https://drive.google.com/file/d/12NunzPKp_zYxe-VC6V2UqgvOxE6vRsV5/view?usp=drive_link";
 
 
   return (
